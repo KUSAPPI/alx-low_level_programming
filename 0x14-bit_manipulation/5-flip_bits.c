@@ -1,19 +1,21 @@
 /**
  * flip_bits - A function that gets number of bits needed to flip
+ * This script was written by Bright Kusi Appiah
  * @n: How many bit flips are needed to equal m for n
- * @m: The number to set other equal
+ * @m: The number to set other equal to
  * Return: The number of fliped bits
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int i, count = 0;
-	unsigned long int current;
+	/* Varaibles are declared below */
+	int me, count = 0;
+	unsigned long int updated1;
 	unsigned long int exclusive = n ^ m;
 
-	for (i = 63; i >= 0; i--)
+	for (me = 63; me >= 0; me--)
 	{
-		current = exclusive >> i;
-		if (current & 1)
+		updated1 = exclusive >> me;
+		if (updated1 & 1)
 			count++;
 	}
 
