@@ -12,11 +12,12 @@ int set_bit(unsigned long int *n, unsigned int index)
 	unsigned long int me = 0x01;
 	/* Variables declared here */
 
-	me <<= index;
-	if (me == 0)
+	/* me <<= index; */
+	if (index > 63)
 		return (-1);
 
 	*n = ((1UL << index) | *n);
+
 	return (1);
 }
 
