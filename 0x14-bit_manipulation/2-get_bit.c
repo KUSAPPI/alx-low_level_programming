@@ -9,15 +9,11 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int me = 63;
-	/* Varaibales Declared above */
-
-	me <<= index;
-	if (me == 0)
+	int me;
+	/* Declaring the 'me' variable */
+	/* If statement to check for conditionality */
+	if (index > 63)
 		return (-1);
-
-	if ((n & me))
-		return (1);
-	else
-		return (0);
+	me = (n >> index) & 1;
+	return (me);
 }
