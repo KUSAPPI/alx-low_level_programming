@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 	unsigned long int me_present;
 	/* More variables above */
 
-	for (me1 = 63; me1 >= 0; me1--)
+	for (me1 = 64; me1 >= 0; me1--)
 	{
 		me_present = n >> me1;
 
