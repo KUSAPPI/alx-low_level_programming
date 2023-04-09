@@ -11,7 +11,7 @@ int get_endianness(void)
 	/*Declaring the needed variables*/
 	unsigned int me = 1;
 	char *chi = (char *)&me;
-	
+
 	/* If conditionality */
 	if (*chi)
 		return (1);
