@@ -84,6 +84,6 @@ int close_me(int description)
 
 	error_occured = close(description);
 	if (error_occured < 0)
-		dprintf(STDERR_FILENO, "error_occured: Can't close fd %d\n", description);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", description);
 	return (error_occured);
 }
