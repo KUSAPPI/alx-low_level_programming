@@ -28,7 +28,7 @@ void elf_closer(int elf);
  */
 void elf_check(unsigned char *e_ident)
 {
-	int me; 
+	int me;
 	/*This variable above is for 'index'*/
 
 	for (me = 0; me < 4; me++)
